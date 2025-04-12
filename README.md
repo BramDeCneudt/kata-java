@@ -1,5 +1,12 @@
 # Gilded Rose refactoring
 
+## Testing
+For testing, I'm using the Given When Then structure.
+Normally you use a framework for this but to keep it simple I'm using the method names.
+
+### Golden test
+// TODO Explanation about golden test
+
 
 # Gilded Rose Requirements Specification
 
