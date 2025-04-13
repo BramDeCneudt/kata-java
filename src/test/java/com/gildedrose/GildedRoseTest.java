@@ -114,6 +114,19 @@ class GildedRoseTest {
     }
 
     @Test
+    void Given_AnLegendaryItemWithInvalidQuality_When_UpdateInQualityIsTriggered_Then_QualityShouldBeValidAgain() {
+        String itemName = "Sulfuras, Hand of Ragnaros";
+        Item[] items = new Item[] { new Item(itemName, 4, 75) };
+        GildedRose app = new GildedRose(items);
+
+        app.updateQuality();
+
+        assertEquals(itemName, app.items[0].name);
+        assertEquals(80, app.items[0].quality);
+        assertEquals(4, app.items[0].sellIn);
+    }
+
+    @Test
     void Given_AnLegendaryItem_When_UpdateInQualityIsTriggered_Then_QualityShouldRemainTheSame() {
         String itemName = "Sulfuras, Hand of Ragnaros";
         Item[] items = new Item[] { new Item(itemName, 4, 80) };
