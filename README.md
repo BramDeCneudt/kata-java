@@ -9,6 +9,8 @@ Is a means to describe (characterize) the actual behavior of an existing piece o
 
 source: [wiki](https://en.wikipedia.org/wiki/Characterization_test)
 
+### Legendary Item logic
+
 # Gilded Rose Requirements Specification
 
 Hi and welcome to team Gilded Rose. As you know, we are a small inn with a prime location in a
