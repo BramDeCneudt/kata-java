@@ -1,7 +1,21 @@
 # Gilded Rose refactoring
+This is my implementation of the Gilded Rose refactoring.
+Starting point: [Gilded Rose class](src/main/java/com/gildedrose/GildedRose.java)
+As a solution I am using the Strategy pattern with 2 root points and one base interface as such:
 
-## Testing
+![overview strategies Gilded Rose](img/overview-kata.png "overview of all strategies used in the kata")
+
+With as main entry point the [StrategyService](src/main/java/com/gildedrose/strategy/StrategyService.java).
+
+This keeps the code:
+- extensible, you only need to add a new service and extend the StrategyService without modifying existing code.
+- responsible for one principle, each service only needs to cover one strategy/use case keeping each logic in their own classes.
+- unknowing about the underlining implementations. Because each strategy implements the root Strategy interface, the code only needs to call the updateItem method after choosing the strategy.
+
+### Testing
 For testing, I'm using the Given When Then structure.
+I find this way of testing more clear, you can clearly explain your expectations with your test code.
+
 Normally you use a framework for this but to keep it simple I'm using the method names.
 
 ### Golden test
@@ -10,6 +24,10 @@ Is a means to describe (characterize) the actual behavior of an existing piece o
 source: [wiki](https://en.wikipedia.org/wiki/Characterization_test)
 
 ### Legendary Item logic
+
+Added a ```possibleFixLegendaryItem``` method to the LegendaryStrategy to have a control method whenever the quality of the legendary changed.
+This should never happen, so I added a class that checks this and logs this and sets the quality method back to the valid number.
+So the application can keep functioning, but we are informed about this possible issue, and we can do something about it.
 
 # Gilded Rose Requirements Specification
 
