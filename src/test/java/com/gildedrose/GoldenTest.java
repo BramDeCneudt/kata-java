@@ -24,6 +24,8 @@ Backstage passes to a TAFKAL80ETC concert, 5, 20
 Backstage passes to a TAFKAL80ETC concert, 5, 50
 Backstage passes to a TAFKAL80ETC concert, 0, 49
 Conjured Mana Cake, 3, 6
+Conjured Mana Cake, -3, 6
+Conjured Mana Cake, -3, 3
 
 -------- day 1 --------
 name, sellIn, quality
@@ -41,7 +43,9 @@ Backstage passes to a TAFKAL80ETC concert, 9, 22
 Backstage passes to a TAFKAL80ETC concert, 4, 23
 Backstage passes to a TAFKAL80ETC concert, 4, 50
 Backstage passes to a TAFKAL80ETC concert, -1, 0
-Conjured Mana Cake, 2, 5
+Conjured Mana Cake, 2, 4
+Conjured Mana Cake, -4, 2
+Conjured Mana Cake, -4, 0
 
     """;
 
@@ -62,8 +66,10 @@ Conjured Mana Cake, 2, 5
             new Item("Backstage passes to a TAFKAL80ETC concert", 5, 20),
             new Item("Backstage passes to a TAFKAL80ETC concert", 5, 50),
             new Item("Backstage passes to a TAFKAL80ETC concert", 0, 49),
-            // this conjured item does not work properly yet
-            new Item("Conjured Mana Cake", 3, 6)};
+            new Item("Conjured Mana Cake", 3, 6),
+            new Item("Conjured Mana Cake", -3, 6),
+            new Item("Conjured Mana Cake", -3, 3)
+        };
 
         GildedRose app = new GildedRose(items);
 

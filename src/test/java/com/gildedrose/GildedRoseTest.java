@@ -206,6 +206,48 @@ class GildedRoseTest {
     }
 
 
+    @Test
+    void Given_ConjuredItemsWithPositiveSellIn_When_UpdateInQualityIsTriggered_Then_QualityShouldDecreaseBy2() {
+        String itemName = "Conjured item";
+
+        Item[] items = new Item[] { new Item(itemName, 5, 20) };
+        GildedRose app = new GildedRose(items);
+
+        app.updateQuality();
+
+        assertEquals(itemName, app.items[0].name);
+        assertEquals(18, app.items[0].quality);
+        assertEquals(4, app.items[0].sellIn);
+    }
+
+
+    @Test
+    void Given_ConjuredItemsWithSellIn0_When_UpdateInQualityIsTriggered_Then_QualityShouldDecreaseBy4() {
+        String itemName = "Conjured item";
+
+        Item[] items = new Item[] { new Item(itemName, 0, 20) };
+        GildedRose app = new GildedRose(items);
+
+        app.updateQuality();
+
+        assertEquals(itemName, app.items[0].name);
+        assertEquals(16, app.items[0].quality);
+        assertEquals(-1, app.items[0].sellIn);
+    }
+
+    @Test
+    void Given_ConjuredItemsWithNegativeSellIn_When_UpdateInQualityIsTriggered_Then_QualityShouldDecreaseBy4() {
+        String itemName = "Conjured item";
+
+        Item[] items = new Item[] { new Item(itemName, -5, 20) };
+        GildedRose app = new GildedRose(items);
+
+        app.updateQuality();
+
+        assertEquals(itemName, app.items[0].name);
+        assertEquals(16, app.items[0].quality);
+        assertEquals(-6, app.items[0].sellIn);
+    }
 
 
 
