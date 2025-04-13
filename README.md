@@ -5,8 +5,9 @@ For testing, I'm using the Given When Then structure.
 Normally you use a framework for this but to keep it simple I'm using the method names.
 
 ### Golden test
-// TODO Explanation about golden test
+Is a means to describe (characterize) the actual behavior of an existing piece of software, and therefore protect existing behavior of legacy code against unintended changes via automated testing.
 
+source: [wiki](https://en.wikipedia.org/wiki/Characterization_test)
 
 # Gilded Rose Requirements Specification
 
