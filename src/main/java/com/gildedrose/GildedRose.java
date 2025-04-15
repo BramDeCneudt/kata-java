@@ -19,4 +19,5 @@ class GildedRose {
             strategy.updateItem(item);
         }
     }
+
 }

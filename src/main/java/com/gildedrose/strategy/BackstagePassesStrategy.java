@@ -6,9 +6,9 @@ public class BackstagePassesStrategy extends DefaultStrategy {
 
     @Override
     public void updateItem(Item item) {
-        if (item.sellIn > 11) {
+        if (item.sellIn >= 11) {
             item.quality += 1;
-        } else if (item.sellIn > 6) {
+        } else if (item.sellIn >= 6) {
             item.quality += 2;
         } else if (item.sellIn > 0) {
             item.quality += 3;
