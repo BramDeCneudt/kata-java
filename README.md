@@ -29,6 +29,16 @@ Added a ```possibleFixLegendaryItem``` method to the LegendaryStrategy to have a
 This should never happen, so I added a class that checks this and logs this and sets the quality method back to the valid number.
 So the application can keep functioning, but we are informed about this possible issue, and we can do something about it.
 
+# Project management
+
+This kata is tracked by this Trello kanban board: [Kanban Board](https://trello.com/invite/b/67fa2835db3fb7b5dd911c0c/ATTIf20112eaff94162ff3b51cfde195edde80434B52/kata)
+
+The git commits are structed with the kata-[ticket number] [title], so you can follow the linked tickets on the kata board.
+
+The kanban tickets with blue labels are kata-Typescript only.
+
+You can also see the public repo here: [kata-java](https://github.com/BramDeCneudt/kata-java)
+
 # Gilded Rose Requirements Specification
 
 Hi and welcome to team Gilded Rose. As you know, we are a small inn with a prime location in a
