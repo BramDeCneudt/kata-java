@@ -1,6 +1,5 @@
 package com.gildedrose;
 
-import com.gildedrose.external.Item;
 import com.gildedrose.strategy.StrategyService;
 
 class GildedRose {

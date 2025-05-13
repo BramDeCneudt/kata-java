@@ -1,6 +1,6 @@
 package com.gildedrose.strategy;
 
-import com.gildedrose.external.Item;
+import com.gildedrose.Item;
 
 public interface Strategy {
 
